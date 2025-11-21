@@ -1,10 +1,7 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  {
-    path: 'home',
-    loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
-  },
+
   {
     path: '',
     redirectTo: 'home',
@@ -13,5 +10,13 @@ export const routes: Routes = [
   {
     path: 'autenticacion',
     loadComponent: () => import('./auth/pages/auth-page/auth-page.page').then( m => m.AuthPagePage)
+  },
+  {
+    path: 'home',
+    loadComponent: () => import('./home/pages/home/home.page').then( m => m.HomePage)
+  },
+  {
+    path: 'nueva-ruta',
+    loadComponent: () => import('./driver-route/pages/new-route/new-route.page').then( m => m.NewRoutePage)
   },
 ];

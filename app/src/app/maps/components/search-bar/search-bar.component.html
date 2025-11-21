@@ -1,0 +1,13 @@
+<div class="search-container">
+    <input type="text" class="form-control" placeholder="Buscar lugar..." [(ngModel)]="myPlaceValue"  (keyup)="onQueryChanged()" id="result">
+    <!--
+    <app-search-results ></app-search-results>
+    -->
+  <!-- pasamos el tipo -->
+  <!-- Solo mostramos resultados si showResults es true -->
+  <app-search-results
+    *ngIf="showResults"
+    [type]="type"
+    (resultEvent)="onPlaceSelected($event)">
+  </app-search-results>
+</div>

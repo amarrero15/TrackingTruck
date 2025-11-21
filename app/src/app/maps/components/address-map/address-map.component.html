@@ -1,0 +1,43 @@
+<div #mapDiv class="map-container">
+
+</div>
+<div class="row" style="margin-top: 2rem;">
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-6">
+                <label class="place-title" for="">Punto de Origen</label>
+                <!-- Buscador para punto de SALIDA -->
+                <app-search-bar type="origin"></app-search-bar>
+
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Conductor Designado</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+
+            </div>
+            <div class="col-md-6">
+                <Label class="place-title"> Punto de Llegada</Label>
+                <!-- Buscador para punto de LLEGADA -->
+                <app-search-bar type="destination"></app-search-bar>
+
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Vehículo Designado</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+                <mat-form-field class="datePicker" appearance="outline">
+                    <mat-label>fecha de inicio</mat-label>
+                    <input  matInput [matDatepicker]="picker1" [formControl]="date" [min]="todayDate" [(ngModel)]="startDate" (dateChange)="dateValueChange($event.value)" >
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                    <mat-hint> formato de fecha: MM/DD/YYYY</mat-hint>
+                  </mat-form-field>  
+    </div>
+</div>
