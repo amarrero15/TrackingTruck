@@ -34,11 +34,16 @@ export const MY_DATE_FORMATS = {
   ]
 })
 export class AddressMapComponent  implements AfterViewInit {
-    startDate=new Date();
+  inputFecha!: HTMLInputElement; // Declaración tipada
+  inputFecha2!: HTMLInputElement; // Declaración tipada
+
+  startDate=new Date();
   finalDate=this.addDaysToFinalDate(this.startDate, 1);
   todayDate=new Date();
-    date = new FormControl(new Date());
+  date = new FormControl(new Date());
   serializedDate = new FormControl(new Date().toISOString());
+
+  
   @ViewChild('mapDiv') mapDivElement!: ElementRef<HTMLDivElement>;
 
 dateValueChange(value: Date | null) {
@@ -60,6 +65,15 @@ dateValueChange(value: Date | null) {
   }
 
   ngAfterViewInit(): void {
+      this.inputFecha = document.getElementById('fecha') as HTMLInputElement;
+
+      const hoy = new Date().toISOString().split("T")[0];
+      this.inputFecha.min = hoy;
+
+      this.inputFecha2 = document.getElementById('fecha2') as HTMLInputElement;
+
+      //const hoy = new Date().toISOString().split("T")[0];
+      this.inputFecha2.min = hoy;
     // Si ya tenemos la localización, inicializamos de una vez
     if (this.placesService.isUserLocationReady) {
       this.initMap(this.placesService.userLocation!);

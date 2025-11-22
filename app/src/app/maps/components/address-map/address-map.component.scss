@@ -38,7 +38,8 @@
     margin-left: 25px;
 }
 .datePicker{
-    //width: 200px;
+    width: 336px;
+    margin-top: 1rem;
     //background: white;
 }
 ::ng-deep.mat-form-field-appearance-outline .mat-form-field-outline {
@@ -61,4 +62,20 @@
 ::ng-deep.mat-calendar-body-selected {
     background-color: #D76928;
     color: #fff;
+}
+
+
+.form-label{
+    margin-left: 3rem;
+}
+
+.form-control{
+    margin-left: 3rem;
+    width: 336px;
+}
+
+.primary-button{
+    height: 37.6px;
+    margin-left: 6rem;
+    margin-top: 16.5rem;
 }

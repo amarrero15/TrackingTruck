@@ -5,9 +5,22 @@
     <div class="col-md-8">
         <div class="row">
             <div class="col-md-6">
-                <label class="place-title" for="">Punto de Origen</label>
-                <!-- Buscador para punto de SALIDA -->
-                <app-search-bar type="origin"></app-search-bar>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label place-title">Punto de Origen</label>
+                    <!-- Buscador para punto de SALIDA -->
+                    <app-search-bar type="origin"></app-search-bar>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Fecha de Inicio</label>
+                    <input type="date" class="form-control"  placeholder="" id="fecha">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Hora de Inicio</label>
+                    <input type="time" class="form-control"  placeholder="" id="horaI">
+                </div>
 
                 <select class="form-select" aria-label="Default select example">
                     <option selected>Conductor Designado</option>
@@ -18,9 +31,20 @@
 
             </div>
             <div class="col-md-6">
-                <Label class="place-title"> Punto de Llegada</Label>
-                <!-- Buscador para punto de LLEGADA -->
-                <app-search-bar type="destination"></app-search-bar>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label place-title">Punto de Llegada</label>
+                    <app-search-bar type="destination"></app-search-bar>
+                </div>  
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Fecha de Cierre</label>
+                    <input type="date" class="form-control"  placeholder="" id="fecha2">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Hora de Llegada</label>
+                    <input type="time" class="form-control"  placeholder="" id="horaF">
+                </div>
 
                 <select class="form-select" aria-label="Default select example">
                     <option selected>Vehículo Designado</option>
@@ -32,12 +56,6 @@
         </div>
     </div>
     <div class="col-md-4">
-                <mat-form-field class="datePicker" appearance="outline">
-                    <mat-label>fecha de inicio</mat-label>
-                    <input  matInput [matDatepicker]="picker1" [formControl]="date" [min]="todayDate" [(ngModel)]="startDate" (dateChange)="dateValueChange($event.value)" >
-                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                    <mat-datepicker #picker1></mat-datepicker>
-                    <mat-hint> formato de fecha: MM/DD/YYYY</mat-hint>
-                  </mat-form-field>  
+        <button class="primary-button large">Crear Ruta</button>
     </div>
 </div>
