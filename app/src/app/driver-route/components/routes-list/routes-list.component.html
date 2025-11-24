@@ -1,3 +1,76 @@
-<p>
-  routes-list works!
-</p>
+<div class="students-list-container">
+  <label class="subtitle" for="">Rutas</label>
+  <div style="margin-left: 3rem;">
+    <div class="row" style="margin-left: 0.5rem;">
+      <div class="col-md-6">
+        <input class="searchInput" matInput (keyup)="applyFilter($event)" placeholder="Ingrese el filtro de búsuqeda" #input>
+      </div>
+      <div class="col-md-6">
+        <button class="exportButton" (click)="exportToXLS()">
+          <i id="xls"></i>
+        </button>
+      </div>
+    </div>
+          
+        <div class="mat-elevation-z0">
+          <table mat-table [dataSource]="dataSource" matSort>
+        
+            <!-- ID Column -->
+            <ng-container matColumnDef="Conductor">
+              <th mat-header-cell *matHeaderCellDef  class="heading" style="text-align:center;"> Conductor</th>
+              <td mat-cell  *matCellDef="let row" class="tableInfo name"> {{row.Conductor}} </td>
+            </ng-container>
+
+            <!-- ID Column -->
+            <ng-container matColumnDef="Inicio">
+              <th mat-header-cell *matHeaderCellDef  class="heading" style="text-align:center;">Inicio</th>
+              <td mat-cell  *matCellDef="let row" class="tableInfo"> {{row.Inicio}} </td>
+            </ng-container>
+
+            <!-- ID Column -->
+              <ng-container matColumnDef="Final">
+              <th mat-header-cell *matHeaderCellDef  class="heading" style="text-align:center;"> Final</th>
+              <td mat-cell  *matCellDef="let row" class="tableInfo"> {{row.Final}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="Origen">
+              <th mat-header-cell *matHeaderCellDef  class="heading" style="text-align: center;"> Origen </th>
+              <td mat-cell *matCellDef="let row" class="tableInfo"> {{row.Origen}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="Destino">
+              <th mat-header-cell *matHeaderCellDef  class="heading" style="text-align: center;"> Destino </th>
+              <td mat-cell *matCellDef="let row" class="tableInfo"> {{row.Destino}}</td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="Vehiculo">
+              <th mat-header-cell *matHeaderCellDef  class="heading" style="text-align: center;"> Vehiculo </th>
+              <td mat-cell *matCellDef="let row" class="tableInfo"> {{row.Vehiculo}}</td>
+            </ng-container>
+       
+            <ng-container matColumnDef="edit">
+              <th mat-header-cell *matHeaderCellDef class="heading" style="text-align: center;"> Editar</th>
+              <td mat-cell class="text-center" *matCellDef="let element; let i=index"> <button class="editItemButton" (click)="editRoutes(element)"><i id="editItem"></i></button></td>
+            </ng-container>
+            
+            <ng-container matColumnDef="delete">
+              <th mat-header-cell *matHeaderCellDef   class="heading" style="text-align: center;"> Eliminar</th>
+              <td mat-cell class="text-center" *matCellDef="let element; let i=index"> <button class=" deleteItemButton" (click)="deleteRoutes(element, i)"><i id="deleteItem"></i></button></td>
+            </ng-container>
+      
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+            <!-- Row shown when there is no matching data. -->
+            <tr class="mat-row" *matNoDataRow>
+              <td class="mat-cell" colspan="4">Sin coincidencias con el filtro "{{input.value}}"</td>
+            </tr>
+          </table>
+        
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+        </div>
+  </div>
+</div>

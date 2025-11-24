@@ -1,0 +1,27 @@
+<div class="new-driver-container">
+  <label>Registro de Conductores</label>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="driverName" placeholder="Nombre" [(ngModel)]="driverData.name">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email</label>
+        <input type="text" class="form-control" id="driverName" placeholder="email@email.com" [(ngModel)]="driverData.email">
+      </div> 
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="driverName" placeholder="Apellido" [(ngModel)]="driverData.lastName">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+        <input type="text" class="form-control" id="driverName" placeholder="ingrese su número" [(ngModel)]="driverData.phoneNumber">
+      </div>
+    </div>
+    <button class="primary-button large" (click)="addDriver()">Agregar Conductor</button>
+  </div>
+</div>

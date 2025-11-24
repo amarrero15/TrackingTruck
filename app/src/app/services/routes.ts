@@ -13,7 +13,7 @@ export class RoutesService {
     return this.http.post(`${this.API_URI}/rutas`, routeData)
   }
 
-  getRoutes(){
+  getRoutes(): Observable<any> {
     return this.http.get(`${this.API_URI}/rutas`);
   }
   updateRoutes(){

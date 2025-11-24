@@ -8,3 +8,28 @@
     border-radius: 10px;
     color: #FFFFFF;
 }
+
+.deleteItemButton{
+    width: 2rem;
+    height: 2rem;
+    padding-left: 0%;
+    padding-right: 0%;
+    background: #FF443C;
+    border-radius: 100%;
+    border: none;
+}
+.deleteItemButton:hover{
+    background: #8D1223;
+}
+.editItemButton{
+    width: 2rem;
+    height: 2rem;
+    padding-left: 0%;
+    padding-right: 0%;
+    border-radius: 100%;
+    border: none;
+    background: #F5DC20;
+}
+.editItemButton:hover{
+    background: #F5861F;
+}

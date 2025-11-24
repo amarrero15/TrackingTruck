@@ -1,12 +1,20 @@
 .side-bar-container{
-    width: 12rem;
+    width: 5.5rem;
     height: 100vh;
-    background: #5377A6;
+    background: #ffffff;
+        box-shadow: 1px 0 0 rgba(22, 8, 43, 0.1);
+}
+.side-bar-container:hover{
+   width: 12rem; 
+   transition: 2s;
+}
+.side-bar-container:not(:hover){
+    transition: 2s;
 }
 .home-panel-comtainer{
     width: 100vw;
 
-    background: #BACDD9;
+    background: #FFFFFF;
     height: 100%;
 
 }

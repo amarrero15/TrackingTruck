@@ -1,0 +1,41 @@
+#car{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    content: url('../../assets/icon/car.svg');
+}
+#driver{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    content: url('../../assets/icon/user.svg');
+}
+
+#routes{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    content: url('../../assets/icon/route.svg');
+}
+#logout{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    content: url('../../assets/icon/logout.svg');
+}
+#xls{
+    width: 1.625rem;
+    height: 1.625rem;
+    content: url('../../assets/icon/xls.svg');
+}
+
+#deleteItem{
+    width: 1.625rem;
+    height: 1.625rem;
+    content: url('../../assets/icon/delete.svg');
+}
+#editItem{
+    width: 1.625rem;
+    height: 1.625rem;
+    content: url('../../assets/icon/editItem.svg');
+}

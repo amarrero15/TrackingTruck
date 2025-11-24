@@ -1,0 +1,12 @@
+<mat-card class="service-card" appearance="outlined">
+  <img mat-card-image [src]="serviceData.image" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <h2 class="service-card-title">{{serviceData.title}}</h2>
+    <p class="service-card-description">
+      {{serviceData.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button class="service-card-button" (click)="cta()">Quiero este servicio →</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,3 +1,28 @@
 <div class="side-bar-container">
+    <div class="text-center">
+        <img class="moon" src="assets/icon/moon.svg" alt="luna creciente">
+    </div>
 
+
+
+  <div  style="padding-top: 8rem;">
+      <mat-accordion  >          
+          <mat-expansion-panel *ngFor="let section of sideBarSections"
+            class="option" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="optionTitle">
+               <i id="{{section.icon}}"></i> {{section.title}}
+              </mat-panel-title>
+            </mat-expansion-panel-header>             
+            <p *ngFor="let subsection of section.options" 
+              class="function" (click)="openForm(subsection.event)">{{subsection.name}}</p>
+          </mat-expansion-panel>             
+        </mat-accordion>
+  </div>
+
+  <div class="text-center" style="padding-top: 12rem;">
+    <button class="authButton" (click)="logout()"> <i id="logout"></i></button>
+  </div>
+
+      
 </div>

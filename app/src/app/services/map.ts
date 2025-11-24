@@ -12,6 +12,10 @@ export class MapService {
   private startMarker?: Marker;
   private endMarker?: Marker;
 
+  // 🔹 NUEVO: posición actual y marcador del dispositivo
+  public userLocation?: [number, number];
+  private userMarker?: Marker;
+
   // rutas almacenadas
   public startLocation?: [number, number];
   public endLocation?: [number, number];

@@ -1,0 +1,17 @@
+.service-card {
+  max-width: 21.41375rem;
+  height: 30.033125rem;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  @media (max-width:575.98px){
+    
+  }
+
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

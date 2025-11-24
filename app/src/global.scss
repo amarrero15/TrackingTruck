@@ -9,6 +9,7 @@
 @import './theme/background/background.scss';
 @import './theme/containers/containers.scss';
 @import './theme/buttons/buttons.scss';
+@import './theme/icon/icon.scss';
 
 html {
   @include mat.theme((

@@ -1,0 +1,27 @@
+<div class="new-driver-container">
+  <label>Registro de Vehículos</label>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Marca</label>
+        <input type="text" class="form-control" id="driverName" placeholder="Nombre" [(ngModel)]="carData.brand">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Modelo</label>
+        <input type="text" class="form-control" id="driverName" placeholder="Mitsubishi" [(ngModel)]="carData.model">
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Placa/Matrícula</label>
+        <input type="text" class="form-control" id="driverName" placeholder="EJ. 2TX-433" [(ngModel)]="carData.numberPlate">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Capacidad</label>
+        <input type="text" class="form-control" id="driverName" placeholder="Ej 2 toneladas" [(ngModel)]="carData.capacity">
+      </div>
+    </div>
+    <button class="primary-button large" (click)="addCar()">Agregar Vehículo</button>
+  </div>
+</div>

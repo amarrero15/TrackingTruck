@@ -4,7 +4,7 @@ export const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'rutas',
     pathMatch: 'full',
   },
   {
@@ -18,5 +18,18 @@ export const routes: Routes = [
   {
     path: 'nueva-ruta',
     loadComponent: () => import('./driver-route/pages/new-route/new-route.page').then( m => m.NewRoutePage)
+  },
+  {
+    path: 'rutas',
+    loadComponent: () => import('./driver-route/pages/routes/routes.page').then( m => m.RoutesPage)
+  },
+
+  {
+    path: 'conductores',
+    loadComponent: () => import('./drivers/pages/drivers/drivers.page').then( m => m.DriversPage)
+  },
+  {
+    path: 'vehiculos',
+    loadComponent: () => import('./cars/pages/cars/cars.page').then( m => m.CarsPage)
   },
 ];
